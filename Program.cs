@@ -114,3 +114,22 @@ Console.WriteLine();
 Console.WriteLine($"Количество задач: {tasks.Count}");
 PrintTasks(tasks);
 
+//13. Самостоятельное задание
+//Вариант 1. Количество совпадений
+int CountTask(List<string> tasks, string title)
+{
+    int count = 0;
+    foreach (string i in tasks)
+    {
+        if (i == title)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+Console.Write("Название для подсчёта совпадений: ");
+string countTitle = Console.ReadLine();
+
+int match = CountTask(tasks, countTitle);
+Console.WriteLine($"Совпадений для *{countTitle}* : {match}");
